@@ -5,6 +5,14 @@ import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 
 public class Main{
+  
+  /*
+  제일 낮은 위치부터 테이프를 붙여간다.
+  
+  1. 물이 새는 위치를 오름차순 정렬한다.
+  2. 제일 낮은 위치부터 시작하여 테이프 수를 +1씩 해주고
+     테이프의 길이만큼 위치를 증가시킨다. 
+  */
 
   public static void main(String []args) throws Exception{
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -18,11 +26,13 @@ public class Main{
     for(int i=0;i<N;i++){
       thing[i] = Integer.parseInt(tmp[i]);
     }
+    // 물이 새는 위치 오름차순 정렬
     Arrays.sort(thing);
 
     int result = 0;
     int idx = 0;
 
+    // 제일 낮은 위치부터 테이프를 붙여감
     for(int t: thing){
       if(idx < t){
         ++result;
