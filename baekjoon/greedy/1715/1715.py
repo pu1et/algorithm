@@ -23,6 +23,7 @@ else:
     tmp1 = heapq.heappop(card)
     tmp2 = heapq.heappop(card)
     result += tmp1 + tmp2
+    
     # 합한 카드 묶음을 우선순위 큐에 넣음
     heapq.heappush(card, tmp1+tmp2)
     
