@@ -22,8 +22,8 @@ public class Main{
 
     for(int i=0;i<=N/3;i++){
       tmp = N - 3*i; // == N%3
-      if(tmp %5 == 0){
-        result = i + tmp/5; // 최소 가방 수 이므로 break
+      if(tmp %5 == 0){ // 최소 가방 수 이므로 break
+        result = i + tmp/5; 
         break;
       }
     }
